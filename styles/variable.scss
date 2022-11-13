@@ -1,0 +1,18 @@
+:root {
+    //colors
+    --color-bright: #d1d1d1;
+    --color-dark: #1d1d20;
+    --color-active: #ffaa00;
+
+    //numbers
+    --corner-length: 300px;
+    --padding-size: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+    :root {
+        --corner-length: 120px;
+        --padding-size: 7.5px;
+    }
+}
