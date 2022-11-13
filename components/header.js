@@ -3,7 +3,7 @@ const Header = () => {
         <header>
             <div className="logo">D</div>
             <nav>
-                <div>Mail</div>
+                <div>Email</div>
                 <div>Github</div>
                 <div>LinkedIn</div>
             </nav>
