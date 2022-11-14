@@ -15,7 +15,7 @@ const Content = ({ children }) => {
                         <div className='mine-content'>
                             <div className='mine-content-inner'>
                                 <div>
-                                    <Link href={router.pathname == '/skills' ? '/' : '/skills'} className={router.pathname == '/skills' ? 'active' : ''}><span>Skills</span></Link>
+                                    <Link href={router.pathname == '/skills' ? '/' : '/skills'} className={(router.pathname == '/skills' ? 'active' : '') + ' ' + (router.pathname.includes('/skills') ? 'inside' : '')}><span>Skills</span></Link>
                                 </div>
                                 <div>
                                     <Link href=''><span>Projects</span></Link>

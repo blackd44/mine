@@ -113,12 +113,14 @@ a {
             }
           }
 
-          a.active {
+          a.inside {
             >span {
               background-size: 100%;
               letter-spacing: 1px;
             }
+          }
 
+          a.active.inside {
             >span::before {
               content: '↫ ';
             }
