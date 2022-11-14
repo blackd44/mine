@@ -4,15 +4,26 @@
     --color-dark: #1d1d20;
     --color-active: #ffaa00;
 
+    //gradients
+    --linear-gradient-medium: linear-gradient(135deg, var(--color-active), var(--color-bright));
+    --linear-gradient-large: linear-gradient(135deg, var(--color-active) 0%, var(--color-bright) 15%, var(--color-bright) 85%, var(--color-active) 99%);
+
     //numbers
-    --corner-length: 300px;
+    --line-length: 300px;
     --padding-size: 20px;
+    --sm-line-width: 2.5px;
+    --xs-line-width: 1px;
+
+    //time
+    --transition-speed: .5s;
+    --fast-transition-speed: .3s;
 }
 
 
 @media screen and (max-width: 600px) {
     :root {
-        --corner-length: 120px;
+        --line-length: 120px;
         --padding-size: 7.5px;
+        --sm-line-width: 2px;
     }
 }

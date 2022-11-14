@@ -8,13 +8,17 @@ const Content = ({ children }) => {
                     {children}
                 </div>
                 <div className='mine'>
-                    <h2>Check My</h2>
-                    <div className='mine-content'>
-                        <div>
-                            <Link href='/skills'>Skills</Link>
-                        </div>
-                        <div>
-                            <span>Projects</span>
+                    <div className='mine-inner'>
+                        <h2>Check My</h2>
+                        <div className='mine-content'>
+                            <div className='mine-content-inner'>
+                                <div>
+                                    <Link href='/skills'><span>Skills</span></Link>
+                                </div>
+                                <div>
+                                    <Link href=''><span>Projects</span></Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

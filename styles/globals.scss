@@ -5,6 +5,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: var(--transition-speed) ease;
 }
 
 body {
@@ -53,15 +54,78 @@ a {
     top: 0;
     position: absolute;
     background-color: var(--color-active);
-    background: linear-gradient(135deg, var(--color-active) 0%, var(--color-bright) 15%, var(--color-bright) 85%, var(--color-active) 99%);
-    clip-path: polygon(0 0, var(--corner-length) 0, 0 var(--corner-length), calc(100% - var(--corner-length)) 100%, 100% calc(100% - var(--corner-length)), 100% 100%, calc(100% - var(--corner-length)) 100%, 0 var(--corner-length));
+    background: var(--linear-gradient-large);
+    clip-path: polygon(0 0, var(--line-length) 0, 0 var(--line-length), calc(100% - var(--line-length)) 100%, 100% calc(100% - var(--line-length)), 100% 100%, calc(100% - var(--line-length)) 100%, 0 var(--line-length));
     border-radius: inherit;
     z-index: -1;
   }
 
   @media screen and (max-width: 600px) {
     >.main-container-outer::after {
-      clip-path: polygon(0 0, var(--corner-length) 0, var(--corner-length) var(--corner-length), 0 var(--corner-length));
+      clip-path: polygon(0 0, var(--line-length) 0, var(--line-length) var(--line-length), 0 var(--line-length));
+    }
+  }
+}
+
+.mine {
+  >.mine-inner {
+    position: relative;
+
+    >h2 {
+      font-weight: unset;
+    }
+
+    >.mine-content {
+      position: relative;
+      border-top-left-radius: 7px;
+
+      >.mine-content-inner {
+        position: relative;
+        padding: calc(var(--padding-size) * 1.5) calc(var(--padding-size) * 1.5) 0;
+        background-color: var(--color-dark);
+        z-index: 1;
+        border-radius: inherit;
+
+        >div {
+          margin-bottom: 10px;
+          display: grid;
+
+          a {
+            padding-bottom: 10px;
+            position: relative;
+
+            >span {
+              background: var(--linear-gradient-medium);
+              color: transparent;
+              -webkit-background-clip: text;
+              font-weight: 600;
+              background-size: 0%;
+              background-color: var(--color-bright);
+              transition: var(--fast-transition-speed) ease;
+            }
+          }
+
+          a:hover {
+            >span {
+              background-size: 100%;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+    }
+
+    >.mine-content::before {
+      content: '';
+      width: 90px;
+      height: 90px;
+      max-height: calc(100% + var(--sm-line-width));
+      border-radius: inherit;
+      background: var(--linear-gradient-medium);
+      position: absolute;
+      top: calc(var(--sm-line-width) * -1);
+      left: calc(var(--sm-line-width) * -1);
+      z-index: 0;
     }
   }
 }
@@ -109,6 +173,23 @@ main {
 
       >h1 {
         font-weight: unset;
+        font-size: 350%;
+        margin-top: 0;
+      }
+
+      >div {
+        padding-left: calc(var(--padding-size) + 10px);
+        position: relative;
+      }
+
+      >div::after {
+        content: '';
+        height: 100%;
+        width: var(--sm-line-width);
+        background: var(--linear-gradient-medium);
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
   }
@@ -124,6 +205,12 @@ main {
       grid-template-columns: 1fr;
       gap: 1rem;
       padding: 0;
+
+      >.main-content {
+        >h1 {
+          font-size: 250%;
+        }
+      }
     }
   }
 }
