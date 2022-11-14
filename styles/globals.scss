@@ -96,6 +96,7 @@ a {
 
             >span {
               background: var(--linear-gradient-medium);
+              background-repeat: no-repeat;
               color: transparent;
               background-clip: text;
               font-weight: 600;
@@ -121,7 +122,7 @@ a {
       height: 90px;
       max-height: calc(100% + var(--sm-line-width));
       border-radius: inherit;
-      background: var(--linear-gradient-medium);
+      background: var(--linear-gradient-medium-half);
       position: absolute;
       top: calc(var(--sm-line-width) * -1);
       left: calc(var(--sm-line-width) * -1);

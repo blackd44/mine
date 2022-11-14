@@ -3,10 +3,12 @@
     --color-bright: #d1d1d1;
     --color-dark: #1d1d20;
     --color-active: #ffaa00;
+    --color-active-2: #84b441;
 
     //gradients
-    --linear-gradient-medium: linear-gradient(135deg, var(--color-active), var(--color-bright));
-    --linear-gradient-large: linear-gradient(135deg, var(--color-active) 0%, var(--color-bright) 15%, var(--color-bright) 85%, var(--color-active) 99%);
+    --linear-gradient-medium-half: linear-gradient(135deg, var(--color-active) 0%, var(--color-active-2) 50%);
+    --linear-gradient-medium: linear-gradient(135deg, var(--color-active), var(--color-active-2));
+    --linear-gradient-large: linear-gradient(135deg, var(--color-active) 0%, var(--color-active-2) 15%, var(--color-active-2) 85%, var(--color-active) 99%);
 
     //numbers
     --line-length: 300px;
