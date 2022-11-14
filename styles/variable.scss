@@ -2,8 +2,8 @@
     //colors
     --color-bright: #d1d1d1;
     --color-dark: #1d1d20;
-    --color-active: #ffaa00;
-    --color-active-2: #d1d1d1;
+    --color-active: #00aa00;
+    --color-active-2: #00ffff;
 
     //gradients
     --linear-gradient-medium-half: linear-gradient(135deg, var(--color-active) 0%, var(--color-active-2) 50%);
@@ -19,6 +19,13 @@
     //time
     --transition-speed: .5s;
     --fast-transition-speed: .3s;
+}
+
+@media screen and (orientation: portrait) {
+    :root {
+        --color-active: #00ffff;
+        --color-active-2: #ff00ff;
+    }
 }
 
 

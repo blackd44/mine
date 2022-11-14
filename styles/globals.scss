@@ -338,10 +338,9 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-active-2);
-  transition: var(--transition-speed) ease;
+  background: var(--color-active);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-active);
+  background: var(--color-active-2);
 }

@@ -16,11 +16,29 @@ const Header = () => {
         textColor1.value = textColor1Value
         textColor2.value = textColor2Value
 
-        lineColor1.addEventListener("input", (e) => {
+        //for phone
+        lineColor1.addEventListener("change", (e) => {
             setLineColor1(prev => lineColor1.value);
             set('--color-active', lineColor1Value)
         });
-        lineColor1.addEventListener("change", (e) => {
+
+        lineColor2.addEventListener("change", (e) => {
+            setLineColor2(prev => lineColor2.value);
+            set('--color-active-2', lineColor2Value)
+        });
+
+        textColor1.addEventListener("change", (e) => {
+            setTextColor1(prev => textColor1.value);
+            set('--color-bright', textColor1Value)
+        });
+
+        textColor2.addEventListener("change", (e) => {
+            setTextColor2(prev => textColor2.value);
+            set('--color-dark', textColor2Value)
+        });
+
+        //for laptop
+        lineColor1.addEventListener("input", (e) => {
             setLineColor1(prev => lineColor1.value);
             set('--color-active', lineColor1Value)
         });
