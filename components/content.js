@@ -20,6 +20,9 @@ const Content = ({ children }) => {
                                 <div>
                                     <Link href=''><span>Projects</span></Link>
                                 </div>
+                                <div>
+                                    <Link href=''><span>contact me</span></Link>
+                                </div>
                             </div>
                         </div>
                     </div>

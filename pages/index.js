@@ -27,7 +27,7 @@ export default function Home(props) {
       <Content>
         <h1>Hi Ma Nigga</h1>
         <div>
-          <p>My name is Benn Dalton IRADUKUNDA, I'm a front-end developer based in Kigali, Rwanda. I have developed many types of front-ends from well known platforms, that was kidding, I designed my own projects.</p>
+          <p>My name is Benn Dalton IRADUKUNDA, I'm a front-end developer based in Kigali, Rwanda. I have developed many types of front-ends from well known platforms, that was a joke, I designed my own projects.</p>
           <p>I'm passionate about... wait you don't know, check in the skills page.</p>
         </div>
       </Content>

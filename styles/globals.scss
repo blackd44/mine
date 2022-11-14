@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: var(--transition-speed) ease;
+  user-select: none;
 }
 
 body {
@@ -100,6 +101,7 @@ a {
               color: transparent;
               background-clip: text;
               font-weight: 600;
+              text-transform: capitalize;
               background-size: 0%;
               background-color: var(--color-bright);
               transition: var(--fast-transition-speed) ease;
