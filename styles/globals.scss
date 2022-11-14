@@ -81,7 +81,7 @@ a {
 
       >.mine-content-inner {
         position: relative;
-        padding: calc(var(--padding-size) * 1.5) calc(var(--padding-size) * 1.5) 0;
+        padding: calc(var(--padding-size) * 1.5) calc(var(--padding-size) * 1.5);
         background-color: var(--color-dark);
         z-index: 1;
         border-radius: inherit;
@@ -110,6 +110,17 @@ a {
             >span {
               background-size: 100%;
               letter-spacing: 1px;
+            }
+          }
+
+          a.active {
+            >span {
+              background-size: 100%;
+              letter-spacing: 1px;
+            }
+
+            >span::before {
+              content: '↫ ';
             }
           }
         }

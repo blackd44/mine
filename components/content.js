@@ -1,6 +1,8 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 
 const Content = ({ children }) => {
+    const router = useRouter()
     return (
         <>
             <section className='view'>
@@ -13,7 +15,7 @@ const Content = ({ children }) => {
                         <div className='mine-content'>
                             <div className='mine-content-inner'>
                                 <div>
-                                    <Link href='/skills'><span>Skills</span></Link>
+                                    <Link href={router.pathname == '/skills' ? '/' : '/skills'} className={router.pathname == '/skills' ? 'active' : ''}><span>Skills</span></Link>
                                 </div>
                                 <div>
                                     <Link href=''><span>Projects</span></Link>
