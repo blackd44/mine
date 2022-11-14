@@ -203,7 +203,7 @@ header {
 
     >.settings {
       position: relative;
-      z-index: 1;
+      z-index: 2;
 
       >a {
         >span:first-child {
@@ -214,15 +214,16 @@ header {
       >div {
         position: absolute;
         width: max-content;
-        max-height: 250px;
+        max-height: calc(100vh - 55px - (var(--padding-size) * 2));
         overflow-y: auto;
         right: 0;
-        backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px) brightness(0.6);
         border-radius: 10px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         visibility: hidden;
         background-color: #6666;
+        box-shadow: -15px 15px 15px 0 unquote(opacity(#000000, .15));
 
         >div {
           padding: .5rem calc(var(--padding-size) * 2);
