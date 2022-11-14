@@ -98,7 +98,9 @@ main {
 
   section.view {
     display: grid;
-    grid-template-columns: minmax(min-content, 1fr) minmax(350px, 0.5fr);
+    width: 100%;
+    min-height: 15rem;
+    grid-template-columns: 1fr 350px;
     gap: 5rem;
     padding: 0 0 0 calc(var(--padding-size) * 2);
 

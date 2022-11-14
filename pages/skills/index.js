@@ -1,7 +1,11 @@
+import Content from "../../components/content";
+
 const Skills = () => {
     return (
         <>
-            skills
+            <Content>
+                skills
+            </Content>
         </>
     );
 }
