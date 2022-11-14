@@ -138,6 +138,12 @@ a {
           }
         }
       }
+
+      @media screen and (max-width: 600px) {
+        >.mine-content-inner {
+          padding: calc(var(--padding-size) * 2.3) calc(var(--padding-size) * 2.3);
+        }
+      }
     }
 
     >.mine-content::before {
