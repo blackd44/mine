@@ -108,13 +108,13 @@ const Header = () => {
                                     <label style={{ backgroundColor: textColor1Value }}>
                                         <input type="color" id="textColor1" />
                                     </label>
-                                    <label for="textColor1">text color</label>
+                                    <label htmlFor="textColor1">text color</label>
                                 </p>
                                 <p>
                                     <label style={{ backgroundColor: textColor2Value }}>
                                         <input type="color" id="textColor2" />
                                     </label>
-                                    <label for="textColor2">back color</label>
+                                    <label htmlFor="textColor2">back color</label>
                                 </p>
                             </article>
                             <article>
@@ -123,13 +123,13 @@ const Header = () => {
                                     <label style={{ backgroundColor: lineColor1Value }}>
                                         <input type="color" id="lineColor1" />
                                     </label>
-                                    <label for="lineColor1">Color 1</label>
+                                    <label htmlFor="lineColor1">Color 1</label>
                                 </p>
                                 <p>
                                     <label style={{ backgroundColor: lineColor2Value }}>
                                         <input type="color" id="lineColor2" />
                                     </label>
-                                    <label for="lineColor2">Color 2</label>
+                                    <label htmlFor="lineColor2">Color 2</label>
                                 </p>
                             </article>
                         </div>

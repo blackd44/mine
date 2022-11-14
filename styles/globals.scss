@@ -168,15 +168,17 @@ header {
     @include flexEnd;
 
     >div {
-      padding: 0 .8rem;
+      padding: 0 12px;
+      width: 55px;
+      height: 30px;
 
       >a {
         @include flexCenter;
         color: var(--color-hidden);
 
         svg {
-          width: 27px;
-          height: 27px;
+          width: 28px;
+          height: 28px;
         }
 
         >span {
@@ -274,10 +276,13 @@ header {
     }
 
     >div:hover {
+
       a {
         svg {
-          transition: var(--transition-speed) ease;
+          transition: var(--fast-transition-speed) ease;
           fill: url(#linear-gradient-md);
+          width: 35px;
+          height: 35px;
         }
 
         >span:first-child {
@@ -289,6 +294,13 @@ header {
     }
 
     >.settings:hover {
+      a {
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+
       >div {
         visibility: visible
       }
