@@ -53,6 +53,7 @@ a {
     width: calc(100% + (var(--padding-size) * 2));
     height: calc(100% + (var(--padding-size) * 2));
     top: calc(var(--padding-size) * -1);
+    left: calc(var(--padding-size) * -1);
     position: absolute;
     background-color: var(--color-active);
     background: var(--linear-gradient-large);
@@ -63,7 +64,12 @@ a {
 
   @media screen and (max-width: 600px) {
     >.main-container-outer::after {
-      clip-path: polygon(0 0, var(--line-length) 0, var(--line-length) var(--line-length), 0 var(--line-length));
+      clip-path: none;
+      width: var(--line-length);
+      height: var(--line-length);
+      border-radius: unset;
+      border-top-left-radius: inherit;
+      background: var(--linear-gradient-medium-half);
     }
   }
 }
