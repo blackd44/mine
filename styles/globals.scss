@@ -75,6 +75,9 @@ a {
 }
 
 .mine {
+  @include flexCenterY;
+  max-height: calc(100vh - 75px - 80px - (var(--padding-size) * 4));
+
   >.mine-inner {
     position: relative;
 
@@ -165,7 +168,33 @@ header {
     @include flexEnd;
 
     >div {
-      padding: 0 1rem;
+      padding: 0 .8rem;
+
+      >a {
+        @include flexCenter;
+        color: var(--color-hidden);
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+
+        >span {
+          text-align: center;
+          font-size: 80%;
+        }
+
+        >span:first-child {
+          visibility: hidden;
+          background: var(--linear-gradient-medium);
+          background-size: 0%;
+          background-clip: text;
+          position: absolute;
+          top: 7px;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+      }
     }
 
     >div:last-child {
@@ -175,6 +204,12 @@ header {
     >.settings {
       position: relative;
       z-index: 1;
+
+      >a {
+        >span:first-child {
+          top: -23.5px;
+        }
+      }
 
       >div {
         position: absolute;
@@ -237,6 +272,21 @@ header {
       }
     }
 
+    >div:hover {
+      a {
+        svg {
+          transition: var(--transition-speed) ease;
+          fill: url(#linear-gradient-md);
+        }
+
+        >span:first-child {
+          visibility: visible;
+          color: transparent;
+          background-size: 100%;
+        }
+      }
+    }
+
     >.settings:hover {
       >div {
         visibility: visible
@@ -264,10 +314,23 @@ main {
 
     >.main-content {
 
-      >h1 {
+      >h1,
+      >h2,
+      >h3 {
         font-weight: unset;
-        font-size: 350%;
         margin-top: 0;
+      }
+
+      >h1 {
+        font-size: 350%;
+      }
+
+      >h2 {
+        font-size: 300%;
+      }
+
+      >h3 {
+        font-size: 250%;
       }
 
       >div {
@@ -343,4 +406,14 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-active-2);
+}
+
+.linear-gradient-md {
+  >.start {
+    stop-color: var(--color-active);
+  }
+
+  >.stop {
+    stop-color: var(--color-active-2);
+  }
 }

@@ -4,7 +4,10 @@ const Skills = () => {
     return (
         <>
             <Content>
-                skills
+                <h2>MY SKILLS</h2>
+                <div>
+                    <p></p>
+                </div>
             </Content>
         </>
     );
