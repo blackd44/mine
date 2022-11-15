@@ -205,6 +205,16 @@ header {
       }
     }
 
+    @media screen and (max-width: 600px) {
+      >div {
+        >a {
+          >span:first-child {
+            top: -2px;
+          }
+        }
+      }
+    }
+
     >div:last-child {
       padding-right: 0;
     }
@@ -217,6 +227,12 @@ header {
         >span:first-child {
           top: -23.5px;
         }
+
+        @media screen and (max-width: 600px) {
+          >span:first-child {
+            top: -19.5px;
+          }
+        }
       }
 
       >div {
@@ -225,7 +241,7 @@ header {
         max-height: calc(100vh - 55px - (var(--padding-size) * 2));
         overflow-y: auto;
         right: 0;
-        backdrop-filter: blur(3px) brightness(0.6);
+        backdrop-filter: blur(3px) brightness(0.4);
         border-radius: 10px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
