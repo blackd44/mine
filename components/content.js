@@ -1,24 +1,26 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 
-const Content = ({ children }) => {
+const Content = ({ children, type }) => {
     const router = useRouter()
     return (
         <>
             <section className='view'>
-                <div className='main-content'>
+                <div className={`main-content $`}>
                     {children}
                 </div>
                 <div className='mine'>
                     <div className='mine-inner'>
-                        <h2>Check My</h2>
+                        <h2>
+                            <span data-cursor-filter="invert(1)" data-cursor-size="30px">Check</span>
+                        </h2>
                         <div className='mine-content'>
                             <div className='mine-content-inner'>
                                 <div>
-                                    <Link href={router.pathname == '/skills' ? '/' : '/skills'} className={(router.pathname == '/skills' ? 'active' : '') + ' ' + (router.pathname.includes('/skills') ? 'inside' : '')}><span>Skills</span></Link>
+                                    <Link href={router.pathname == '/brain' ? '/' : '/brain'} className={(router.pathname == '/brain' ? 'active' : '') + ' ' + (router.pathname.includes('/brain') ? 'inside' : '')}><span>my brain</span></Link>
                                 </div>
                                 <div>
-                                    <Link href=''><span>Projects</span></Link>
+                                    <Link href=''><span>my Achievements</span></Link>
                                 </div>
                                 <div>
                                     <Link href=''><span>contact me</span></Link>

@@ -7,10 +7,12 @@ const Skills = () => {
             <Head>
                 <title>Skills | BlackD44</title>
             </Head>
-            <Content>
-                <h2>MY SKILLS</h2>
+            <Content type="links">
+                <h2><span data-cursor-filter="invert(1)" data-cursor-size="50px">In My Brain</span></h2>
                 <div>
-                    <p></p>
+                    <p>Technical skills</p>
+                    <p>Software</p>
+                    <p>Things I love</p>
                 </div>
             </Content>
         </>

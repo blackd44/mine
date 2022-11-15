@@ -5,7 +5,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  user-select: none;
+  //user-select: none;
 }
 
 body {
@@ -19,7 +19,6 @@ body {
 
 a {
   all: unset;
-  cursor: pointer;
 }
 
 .main-container {
@@ -118,6 +117,7 @@ a {
           }
 
           a:hover {
+
             >span {
               background-size: 100%;
               letter-spacing: 1px;
@@ -163,6 +163,7 @@ a {
 
 header {
   @include flexFillStart;
+
 
   >.logo {
     font-size: 400%;
@@ -266,10 +267,6 @@ header {
             gap: 10px;
             margin: 10px 0;
             padding: 0 2rem;
-
-            >label {
-              cursor: pointer;
-            }
 
             >label:has(input) {
               display: inline-block;
@@ -451,4 +448,30 @@ footer {
   >.stop {
     stop-color: var(--color-active-2);
   }
+}
+
+.cursor {
+  @include flexCenter;
+  position: fixed;
+  z-index: 10;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 2px solid transparent;
+
+  >div {
+    position: absolute;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    backdrop-filter: var(--cursor-filter);
+    border-radius: inherit;
+    border: 0 solid currentColor;
+    border-width: inherit;
+    transition: var(--fast-transition-speed) ease;
+    //border: 2px solid var(--color-bright);
+  }
+}
+
+::selection {
+  background-color: var(--color-bright);
+  color: var(--color-dark);
 }
