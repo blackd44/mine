@@ -41,6 +41,7 @@ const Mouse = () => {
     }, [])
 
     useEffect(() => {
+        cursor.current.style.borderWidth = `2px`
         const a = document.querySelectorAll('a')
         a.forEach(el => {
             el.addEventListener("mouseenter", event => {
