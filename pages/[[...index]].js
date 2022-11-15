@@ -28,7 +28,7 @@ export default function Home(props) {
         <h1><span data-cursor-filter="invert(1)" data-cursor-size="40px">GREETINGS</span></h1>
         <div>
           <p data-cursor-filter="invert(1)" data-cursor-size="30px">My name is Benn Dalton IRADUKUNDA DUSHIMIMANA but call me Benn Dalton, I'm a front-end developer based in Kigali, Rwanda. I have developed many types of front-ends from well known platforms, that was a joke, I designed my own projects.</p>
-          <p data-cursor-filter="invert(1)" data-cursor-size="30px">I'm passionate about... wait you don't know, check in the skills page.</p>
+          <p data-cursor-filter="invert(1)" data-cursor-size="30px">I'm passionate about... wait you don't know, check in my brain.</p>
         </div>
       </Content>
     </>
