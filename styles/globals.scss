@@ -456,7 +456,8 @@ footer {
   z-index: 10;
   border-radius: 50%;
   pointer-events: none;
-  border: 2px solid transparent;
+  border: 2px solid currentColor;
+  border-width: 0;
 
   >div {
     position: absolute;
@@ -464,9 +465,7 @@ footer {
     height: var(--cursor-size);
     backdrop-filter: var(--cursor-filter);
     border-radius: inherit;
-    border-color: currentColor;
-    border-style: solid;
-    border-width: inherit;
+    border: inherit;
     transition: var(--fast-transition-speed) ease;
     //border: 2px solid var(--color-bright);
   }
