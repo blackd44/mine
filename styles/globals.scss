@@ -74,7 +74,8 @@ a {
 }
 
 .mine {
-  @include flexCenterY;
+  display: grid;
+  align-items: center;
   max-height: calc(100vh - 75px - 80px - (var(--padding-size) * 4));
 
   >.mine-inner {
