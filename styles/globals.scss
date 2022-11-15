@@ -464,7 +464,8 @@ footer {
     height: var(--cursor-size);
     backdrop-filter: var(--cursor-filter);
     border-radius: inherit;
-    border: 0 solid currentColor;
+    border-color: currentColor;
+    border-style: solid;
     border-width: inherit;
     transition: var(--fast-transition-speed) ease;
     //border: 2px solid var(--color-bright);
