@@ -41,50 +41,47 @@ const Mouse = () => {
     }, [])
 
     useEffect(() => {
-        if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-
-            cursor.current.style.borderWidth = `2px`
-            const a = document.querySelectorAll('a')
-            a.forEach(el => {
-                el.addEventListener("mouseenter", event => {
-                    cursor.current.style.width = cssVar('--cursor-hover-size')
-                    cursor.current.style.height = cssVar('--cursor-hover-size')
-                    cursor.current.style.color = cssVar('--color-active-2')
-                })
-                el.addEventListener("mouseleave", event => {
-                    cursor.current.style.width = cssVar('--cursor-size')
-                    cursor.current.style.height = cssVar('--cursor-size')
-                    cursor.current.style.color = 'inherit'
-                })
+        cursor.current.style.borderWidth = `2px`
+        const a = document.querySelectorAll('a')
+        a.forEach(el => {
+            el.addEventListener("mouseenter", event => {
+                cursor.current.style.width = cssVar('--cursor-hover-size')
+                cursor.current.style.height = cssVar('--cursor-hover-size')
+                cursor.current.style.color = cssVar('--color-active-2')
             })
-
-            //back filter
-            const filters = document.querySelectorAll('[data-cursor-filter]')
-            filters.forEach(el => {
-                el.style.cursor = "none"
-                el.addEventListener("mouseenter", event => {
-                    cursor.current.style.backdropFilter = el.dataset.cursorFilter
-                    cursor.current.style.borderWidth = 0
-                })
-                el.addEventListener("mouseleave", event => {
-                    cursor.current.style.backdropFilter = ''
-                    cursor.current.style.borderWidth = `2px`
-                })
+            el.addEventListener("mouseleave", event => {
+                cursor.current.style.width = cssVar('--cursor-size')
+                cursor.current.style.height = cssVar('--cursor-size')
+                cursor.current.style.color = 'inherit'
             })
+        })
 
-            //size
-            const sizes = document.querySelectorAll('[data-cursor-size]')
-            sizes.forEach(el => {
-                el.addEventListener("mouseenter", event => {
-                    cursor.current.style.width = el.dataset.cursorSize
-                    cursor.current.style.height = el.dataset.cursorSize
-                })
-                el.addEventListener("mouseleave", event => {
-                    cursor.current.style.width = cssVar('--cursor-size')
-                    cursor.current.style.height = cssVar('--cursor-size')
-                })
+        //back filter
+        const filters = document.querySelectorAll('[data-cursor-filter]')
+        filters.forEach(el => {
+            el.style.cursor = "none"
+            el.addEventListener("mouseenter", event => {
+                cursor.current.style.backdropFilter = el.dataset.cursorFilter
+                cursor.current.style.borderWidth = 0
             })
-        }
+            el.addEventListener("mouseleave", event => {
+                cursor.current.style.backdropFilter = ''
+                cursor.current.style.borderWidth = `2px`
+            })
+        })
+
+        //size
+        const sizes = document.querySelectorAll('[data-cursor-size]')
+        sizes.forEach(el => {
+            el.addEventListener("mouseenter", event => {
+                cursor.current.style.width = el.dataset.cursorSize
+                cursor.current.style.height = el.dataset.cursorSize
+            })
+            el.addEventListener("mouseleave", event => {
+                cursor.current.style.width = cssVar('--cursor-size')
+                cursor.current.style.height = cssVar('--cursor-size')
+            })
+        })
         return () => { }
 
     }, [path])
