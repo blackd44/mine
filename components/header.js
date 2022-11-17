@@ -1,9 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import CodepenSvg from "./svg/codepen";
-import GithubSvg from "./svg/github";
-import LinkedinSvg from "./svg/linkedin";
-import Settings from "./svg/settings";
+import { CodepenSvg, GithubSvg, LinkedinSvg, Settings } from "./svg";
 
 const Header = () => {
     let [lineColor1Value, setLineColor1] = useState('#00ffff')

@@ -9,6 +9,7 @@
     //gradients
     --linear-gradient-medium-half: linear-gradient(135deg, var(--color-active) 0%, var(--color-active-2) 50%);
     --linear-gradient-medium: linear-gradient(135deg, var(--color-active), var(--color-active-2));
+    --linear-gradient-medium-invert: linear-gradient(-45deg, var(--color-active), var(--color-active-2));
     --linear-gradient-large: linear-gradient(135deg, var(--color-active) 0%, var(--color-active-2) 15%, var(--color-active-2) 85%, var(--color-active) 99%);
 
     //numbers

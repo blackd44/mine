@@ -23,7 +23,7 @@ const Content = ({ children, type }) => {
                                     <Link href=''><span>my Achievements</span></Link>
                                 </div>
                                 <div>
-                                    <Link href=''><span>contact me</span></Link>
+                                    <Link href={router.pathname == '/contact' ? '/' : '/contact'} className={(router.pathname == '/contact' ? 'active' : '') + ' ' + (router.pathname.includes('/contact') ? 'inside' : '')}><span>contact me</span></Link>
                                 </div>
                             </div>
                         </div>

@@ -369,9 +369,99 @@ main {
       >div {
         padding-left: calc(var(--padding-size) + 10px);
         position: relative;
+
+        div:has(input, textarea, select) {
+          margin-bottom: 1.5rem;
+
+          >label {
+            @include flexColumns;
+            position: relative;
+            padding: 0 0 10px;
+            min-height: 40px;
+            height: fit-content;
+            border-bottom: 2px solid currentColor;
+
+            >span {
+              display: inline-block;
+              width: 100%;
+              background: var(--color-dark);
+              position: absolute;
+              translate: 0 21px 0;
+              font-size: 120%;
+              letter-spacing: 2px;
+              transition: var(--fast-transition-speed) ease;
+            }
+
+            input,
+            textarea,
+            select {
+              @include fill;
+              margin: 20px 0 0;
+              padding: 0;
+              border: none;
+              background-color: transparent;
+              color: var(--color-bright);
+              outline: none;
+              font-size: 120%;
+            }
+
+            textarea {
+              padding-bottom: .5rem;
+              resize: none;
+              height: 38px;
+            }
+          }
+
+          >label:has(input:valid,
+            textarea:valid,
+            select:valid,
+            input:focus,
+            textarea:focus,
+            select:focus) {
+            >span {
+              font-size: 80%;
+              translate: 0 0 0;
+            }
+          }
+
+          >label:has(textarea) {
+            height: fit-content;
+            padding-bottom: 0;
+          }
+        }
+
+        button {
+          width: 100%;
+          padding: 0.7rem;
+          border: 1px solid transparent;
+          border-radius: 4px;
+          background: var(--color-bright);
+          color: var(--color-dark);
+          font-size: 120%;
+          font-weight: bold;
+          margin-top: 3rem;
+        }
+
+        button:hover {
+          box-shadow: 0 0 1.5rem var(--color-hidden);
+        }
+
+        button:disabled {
+          border-color: currentColor;
+          background-color: var(--color-dark);
+          color: var(--color-hidden);
+        }
       }
 
-      >div::after {
+      @media screen and (max-width: 900px) {
+        >div {
+          form {
+            padding-right: calc(var(--padding-size) + 10px);
+          }
+        }
+      }
+
+      >div::before {
         content: '';
         height: 100%;
         width: var(--sm-line-width);
@@ -430,15 +520,15 @@ footer {
 }
 
 ::-webkit-scrollbar-track {
-  background: #fff4;
+  background: #fff1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-active);
+  background: var(--linear-gradient-medium);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-active-2);
+  background: var(--linear-gradient-medium-invert);
 }
 
 .linear-gradient-md {
@@ -460,6 +550,8 @@ footer {
   border: 2px solid currentColor;
   border-width: 0;
   translate: -100px -100px;
+  top: 0;
+  left: 0;
 
   >div {
     position: absolute;

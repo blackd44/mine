@@ -9,7 +9,6 @@ const Layout = ({ children }) => {
             <Head>
                 <title>BlackD44</title>
             </Head>
-            <Mouse />
             <div className="main-container">
                 <div className="main-container-outer">
                     <div className="main-container-inner">
@@ -21,6 +20,7 @@ const Layout = ({ children }) => {
                     </div>
                 </div>
             </div>
+            <Mouse />
         </>
     );
 }
