@@ -442,8 +442,10 @@ main {
           margin-top: 3rem;
         }
 
-        button:hover {
-          box-shadow: 0 0 1.5rem var(--color-hidden);
+        @media (hover: hover) {
+          button:hover {
+            box-shadow: 0 0 var(--padding-size) var(--color-hidden);
+          }
         }
 
         button:disabled {

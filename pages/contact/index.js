@@ -1,13 +1,26 @@
 import Head from "next/head";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Content from "../../components/content";
 
 const Contacts = () => {
+    const button = useRef(null)
+
     const [message, setMessage] = useState({
         fullName: '',
         email: '',
         body: '',
     })
+
+    useEffect(() => {
+        if (message.fullName === '' || message.email === '' || message.body === '') {
+            //setDisabled(prev => true)
+            button.current.disabled = true
+        }
+        else {
+            //setDisabled(prev => false)
+            button.current.disabled = false
+        }
+    }, [message])
 
     const changed = (e) => {
         setMessage(prev => ({ ...prev, [e.target.name]: e.target.value }))
@@ -55,7 +68,7 @@ const Contacts = () => {
                                 }} defaultValue={message.body} required />
                             </label>
                         </div>
-                        <button data-cursor-filter="invert(1)" data-cursor-size="40px">Send Message</button>
+                        <button data-cursor-filter="invert(1)" data-cursor-size="40px" ref={button} disabled>Send Message</button>
                     </form>
                 </div>
             </Content>
